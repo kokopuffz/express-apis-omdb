@@ -1,12 +1,18 @@
 <!-- <% // Render your search results here %> -->
 <!-- <% // This is how to do comments in EJS, by the way... %> -->
 
- <h4><%= results.Title  %> </h4>
+ <h4><%= result.Title  %> </h4>
 
+<div><img src="<%= result.Poster %> "</div>
 
- <a href="/details">home</a>
-
- <!-- <a href="" -->
-
+ <p><a href="/movies/<%= result.imdbID %>"> more deets </a></p>
 
  <!-- <a href="" -->
+<!-- Add stars images to reflect the imdb ratings
+Figure out what parameters are need to access the Rotten Tomato information, and display that information to the page -->
+
+<% let starsRating = result.imdbRating  %> 
+IMDB Rating: ⭐️  <%= starsRating  %> 
+<div>
+  <%= result.Ratings[1].Source %>: <%= result.Ratings[1].Value %> 
+</div>

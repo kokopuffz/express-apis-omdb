@@ -35,10 +35,10 @@ app.get("/results", (req, res) => {
   axios.get(url).then((response) => {
     const searchResults = response.data;
     console.log(searchResults);
-    res.render("results.ejs", { results: searchResults });
-    if (!searchResults.response){
-      res.send('movie does not exist, try again')
-    }
+    res.render("results.ejs", { result: searchResults });
+    // if (!searchResults.response){
+    //   res.send('movie does not exist, try again')
+    // }
   });
 });
 
