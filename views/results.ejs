@@ -12,7 +12,7 @@
 Figure out what parameters are need to access the Rotten Tomato information, and display that information to the page -->
 
 <% let starsRating = result.imdbRating  %> 
-IMDB Rating: ⭐️  <%= starsRating  %> 
-<div>
-  <%= result.Ratings[1].Source %>: <%= result.Ratings[1].Value %> 
-</div>
+<p>IMDB Rating: ⭐️ <%= starsRating  %> </p> 
+<p><%= result.Ratings[1].Source %>: <%= result.Ratings[1].Value %></p>
+  
+

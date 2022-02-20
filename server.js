@@ -33,12 +33,15 @@ app.get("/results", (req, res) => {
   const url = `http://www.omdbapi.com/?t=${req.query.search}&plot=full&apikey=${process.env.OMDB_API_KEY}`;
   console.log(url);
   axios.get(url).then((response) => {
-    const searchResults = response.data;
-    console.log(searchResults);
-    res.render("results.ejs", { result: searchResults });
-    // if (!searchResults.response){
-    //   res.send('movie does not exist, try again')
-    // }
+    console.log(response)
+    if (response.data.Response === 'False'){
+      res.render('error.ejs')
+    }else{
+      const searchResults = response.data;
+      console.log(searchResults);
+          res.render("results.ejs", { result: searchResults });  
+    }
+
   });
 });
 
