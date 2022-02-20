@@ -1,2 +1,16 @@
 <% // Render individual movie details here %>
 <% // This is how to do comments in EJS, by the way... %>
+<a href="/">home</a>
+
+  <p>Rated: <%= results.Rated %> </p>
+ <p>Released: <%= results.Released %> </p>
+ <p>Runtime: <%= results.Runtime %> </p>
+ <p>Genre: <%= results.Genre %> </p>
+ <p>Director: <%= results.Director %> </p>
+ <p>Actors: <%= results.Actors %> </p>
+ <p>Plot: <%= results.Plot %> </p>
+ <p>Country: <%= results.Country %> </p>
+ <p>Awards: <%= results.Awards %> </p>
+ <p>IMDB rating: <%= results.imdbRating %> </p>
+ <a href="https://www.imdb.com/title/<%=results.imdbID%> ">IMDB link</a>
+<p>Poster: <%= results.Poster %> </p>
